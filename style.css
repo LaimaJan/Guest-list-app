@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+* {
+	font-family: "open sans";
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(224, 214, 196);
+}
+
+.input-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#input-field {
+	font-size: 30px;
+}
+
+.btns button {
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+ul {
+	background-color: bisque;
+}
+
+ul li {
+	font-size: 26px;
+}
+
+.bonus-1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.inputs input {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 30px;
+}
+
+.bonus-2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.bonus-2 input {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 30px;
+}

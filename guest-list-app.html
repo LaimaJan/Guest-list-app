@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Guest List</title>
+	</head>
+	<body>
+		<input type="text" id="input-field" name="input-field" />
+		<div class="btns">
+			<button id="add-start">Add Guest @ list start</button>
+			<button id="add-end">Add Guest @ list end</button>
+			<button id="remove-first">Remove First</button>
+			<button id="remove-last">Remove Last</button>
+			<button id="reverse-list">Reverse List</button>
+			<!-- <button id="last-to-first">Move last to first</button>
+			<button id="first-to-last">Move last to last</button> -->
+			<div class="bonus-1">
+				<button id="remove-from-to">Remove from - to (number)</button>
+				<div class="inputs">
+					<input
+						type="text"
+						id="input-field-remove-from"
+						name="input-field-remove-from"
+						placeholder="From:"
+					/>
+					<input
+						type="text"
+						id="input-field-remove-to"
+						name="input-field-remove-to"
+						placeholder="To:"
+					/>
+				</div>
+			</div>
+			<div class="bonus-2">
+				<button id="add-at-certain-point">Add at certain point (number)</button>
+				<input
+					type="text"
+					id="input-field-add-somewhere"
+					name="input-field-add-somewhere"
+					placeholder="Add at:"
+				/>
+			</div>
+		</div>
+		<div class="our-list"></div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
