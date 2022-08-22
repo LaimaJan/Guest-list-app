@@ -12,6 +12,8 @@ const inputCertain = document.querySelector("#input-field-add-somewhere");
 
 let guests = [];
 
+displayGuestList();
+
 btns.forEach((btn) => {
 	btn.addEventListener("click", (event) => {
 		let inputFieldValue = inputField.value;
@@ -43,20 +45,23 @@ btns.forEach((btn) => {
 
 		console.log(event.target.id);
 
+		localStorage.setItem("guestNames", JSON.stringify(guests));
 		displayGuestList();
 	});
 });
 
 function displayGuestList() {
+	const storedGuestNames = JSON.parse(localStorage.getItem("guestNames"));
+
 	const ourGuestList = document.querySelector("ul");
 	if (ourGuestList !== null) {
 		ourGuestList.remove();
 	}
 	const ul = document.createElement("ul");
 
-	for (let i = 0; i < guests.length; ++i) {
+	for (let i = 0; i < storedGuestNames.length; ++i) {
 		let newGuest = document.createElement("li");
-		let text = document.createTextNode(guests[i]);
+		let text = document.createTextNode(storedGuestNames[i]);
 		newGuest.appendChild(text);
 		ul.appendChild(newGuest);
 	}
