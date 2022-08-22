@@ -33,6 +33,12 @@ btns.forEach((btn) => {
 			guests.splice(inputFieldFrom, inputFieldTo);
 		} else if (event.target.id == "add-at-certain-point") {
 			guests.splice(inputFieldCertainIndex, 0, inputFieldValue);
+		} else if (event.target.id == "last-to-first") {
+			lastItem = guests.pop();
+			guests.unshift(lastItem);
+		} else if (event.target.id == "first-to-last") {
+			firstItem = guests.shift();
+			guests.push(firstItem);
 		}
 
 		console.log(event.target.id);
