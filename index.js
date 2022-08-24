@@ -41,6 +41,10 @@ btns.forEach((btn) => {
 		} else if (event.target.id == "first-to-last") {
 			firstItem = guests.shift();
 			guests.push(firstItem);
+		} else if (event.target.id == "a-z") {
+			guests.sort();
+		} else if (event.target.id == "z-a") {
+			guests.sort().reverse();
 		}
 
 		console.log(event.target.id);
@@ -51,7 +55,7 @@ btns.forEach((btn) => {
 });
 
 function displayGuestList() {
-	const storedGuestNames = JSON.parse(localStorage.getItem("guestNames"));
+	guests = JSON.parse(localStorage.getItem("guestNames")) || [];
 
 	const ourGuestList = document.querySelector("ul");
 	if (ourGuestList !== null) {
@@ -59,9 +63,9 @@ function displayGuestList() {
 	}
 	const ul = document.createElement("ul");
 
-	for (let i = 0; i < storedGuestNames.length; ++i) {
+	for (let i = 0; i < guests.length; ++i) {
 		let newGuest = document.createElement("li");
-		let text = document.createTextNode(storedGuestNames[i]);
+		let text = document.createTextNode(guests[i]);
 		newGuest.appendChild(text);
 		ul.appendChild(newGuest);
 	}
