@@ -44,7 +44,7 @@ btns.forEach((btn) => {
 		} else if (event.target.id == "a-z") {
 			guests.sort();
 		} else if (event.target.id == "z-a") {
-			guests.sort().reverse();
+			guests.sort((a, b) => b.localeCompare(a));
 		}
 
 		console.log(event.target.id);
